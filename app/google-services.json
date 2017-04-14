@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "785216924046",
+    "firebase_url": "https://e-cracking-f44e2.firebaseio.com",
+    "project_id": "e-cracking-f44e2",
+    "storage_bucket": "e-cracking-f44e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785216924046:android:75780b86185f8463",
+        "android_client_info": {
+          "package_name": "com.example.mohit.e_cracking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785216924046-jc4ekdqp44so2ksuuibirvur2p10ppn5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mohit.e_cracking",
+            "certificate_hash": "A85AC9ED6B8954A74E0579AC92BB5ACA29E2F139"
+          }
+        },
+        {
+          "client_id": "785216924046-fn8uu1id4tkcfsmuab791gkcqtdqn63s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeuVZJFXdk6RUEARDnwN9NxnjAycffUrQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785216924046-fn8uu1id4tkcfsmuab791gkcqtdqn63s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
