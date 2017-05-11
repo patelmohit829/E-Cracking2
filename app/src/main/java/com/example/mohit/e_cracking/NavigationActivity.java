@@ -123,7 +123,7 @@ public class NavigationActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_tests) {
+        if (id == R.id.nav_homework) {
 
             TestFragment testFragment = new TestFragment();
             FragmentManager manager = getSupportFragmentManager();
@@ -132,7 +132,7 @@ public class NavigationActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_results) {
 
-        } else if (id == R.id.nav_homework) {
+        } else if (id == R.id.nav_tests) {
 
         } else if (id == R.id.nav_logOut) {
 

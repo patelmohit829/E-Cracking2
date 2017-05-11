@@ -32,13 +32,13 @@ public class AccountActivity extends AppCompatActivity
     GoogleApiClient mGoogleApiClient;
     private Button nextButton, doItLater, previousButton, submitButton;
     private FirebaseAuth mAuth;
-    private Firebase mRef, mmRef, mmmRef, mmmmRef, mref, mRefChild, mRefChildChild, mAnswer, mmAnswer, mRefTest, mRefTestId, mCheck, mSubmit, mCumulativeScore;
+    private Firebase mRef, mmRef, mmmRef, mmmmRef, mref, mRefChild, mRefChildChild, mAnswer, mmAnswer, mRefTest, mRefTestId, mCheck, mSubmit, mDetails;
     private FirebaseAuth.AuthStateListener mAuthListener;
     String uid, name, email, answer, testId, studentAnswer, ourAnswer;
     StringBuffer wrongAnswer = new StringBuffer("Wrong answers : ");
     StringBuffer notAttempted = new StringBuffer("Not attempted : ");
     TextView questionId, retrieve;
-    int i =1, k, p=1, scoreTestOne=0, cmScore=0, checked;
+    int i =1, k, p=1, scoreTestOne=0, checked;
     RadioButton radioButton, radioButton2, radioButton3, radioButton4;
     RadioGroup radioGroup;
 
@@ -77,7 +77,7 @@ public class AccountActivity extends AppCompatActivity
 
         Bundle extras = getIntent().getExtras();
         testId = extras.getString("testId");
-        retrieve.setText(testId);
+        retrieve.setText("Homework ID: " + testId);
 
 
         mRef = new Firebase("https://e-cracking-f44e2.firebaseio.com/");
@@ -85,8 +85,6 @@ public class AccountActivity extends AppCompatActivity
         mRefChild = mRef.child(uid);
 
         mRefTest = mRefChild.child("Tests");
-
-        mCumulativeScore = mRefChild.child("Cumulative Score");
 
         mRefTestId = mRefTest.child(testId);
 
@@ -387,6 +385,7 @@ public class AccountActivity extends AppCompatActivity
         previousButton.setVisibility(View.INVISIBLE);
         submitButton.setVisibility(View.INVISIBLE);
         mSubmit = mRefTestId.child("Submitted");
+        mDetails = mRefTestId.child("Details");
         mSubmit.setValue(1);
 
 
@@ -411,35 +410,6 @@ public class AccountActivity extends AppCompatActivity
                             scoreTestOne = scoreTestOne + 1;
                         }
                         retrieve.setText("Your Score: " + String.valueOf(scoreTestOne) + "/20");
-
-                        mmmmRef = new Firebase("https://e-cracking-f44e2.firebaseio.com/"+ uid.toString() +"/Cumulative Score");
-                        mmmmRef.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                if(dataSnapshot.exists())
-                                {
-
-                                    String Retrieve = dataSnapshot.getValue().toString();
-                                    cmScore = Integer.parseInt(Retrieve);
-                                    cmScore = cmScore + scoreTestOne;
-                                    mCumulativeScore.setValue(cmScore);
-                                    Log.d("if", String.valueOf(scoreTestOne));
-
-                                }
-
-                            }
-
-                            @Override
-                            public void onCancelled(FirebaseError firebaseError) {
-
-                            }
-                        });
-
-                        if(cmScore == 0){
-
-                            mCumulativeScore.setValue(scoreTestOne);
-                        }
-
                         p++;
 
                     }else{
@@ -451,6 +421,8 @@ public class AccountActivity extends AppCompatActivity
                     if(p==21) {
                         wrongAnswer.append(notAttempted);
                         questionId.setText(wrongAnswer);
+                        mDetails.setValue(wrongAnswer);
+
                     }
 
 

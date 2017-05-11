@@ -10,14 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mohit.e_cracking.MainActivity">
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:layout_below="@+id/logInButton"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="56dp" />
-
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"

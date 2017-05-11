@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="49dp"
         android:id="@+id/studentTestID"
-        android:hint="Test ID" />
+        android:hint="Homework ID" />
 
     <Button
         android:text="Submit"

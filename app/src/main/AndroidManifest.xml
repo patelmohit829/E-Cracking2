@@ -20,10 +20,10 @@
         </activity>
         <activity
             android:name=".AccountActivity"
-            android:label="My App"></activity>
+            android:label="Homework Submission"></activity>
         <activity
             android:name=".NavigationActivity"
-            android:label="@string/title_activity_navigation"
+            android:label="Home"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
