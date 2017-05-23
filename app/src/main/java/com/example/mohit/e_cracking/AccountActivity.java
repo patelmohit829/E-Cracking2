@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -29,16 +30,15 @@ import java.net.URL;
 public class AccountActivity extends AppCompatActivity
 {
 
-    GoogleApiClient mGoogleApiClient;
-    private Button nextButton, doItLater, previousButton, submitButton;
+    private Button nextButton, previousButton, submitButton;
     private FirebaseAuth mAuth;
-    private Firebase mRef, mmRef, mmmRef, mmmmRef, mref, mRefChild, mRefChildChild, mAnswer, mmAnswer, mRefTest, mRefTestId, mCheck, mSubmit, mDetails;
+    private Firebase mRef, mmRef, mmmRef, mref, mRefChild, mRefChildChild, mAnswer, mmAnswer, mRefTest, mRefTestId, mCheck, mSubmit, mDetails;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    String uid, name, email, answer, testId, studentAnswer, ourAnswer;
+    String uid, name, email, answer, testId, ourAnswer;
     StringBuffer wrongAnswer = new StringBuffer("Wrong answers : ");
-    StringBuffer notAttempted = new StringBuffer("Not attempted : ");
+    StringBuffer notAttempted = new StringBuffer("\nNot attempted : ");
     TextView questionId, retrieve;
-    int i =1, k, p=1, scoreTestOne=0, checked;
+    int i =1, k, p=1, scoreTestOne=0;
     RadioButton radioButton, radioButton2, radioButton3, radioButton4;
     RadioGroup radioGroup;
 
@@ -60,7 +60,6 @@ public class AccountActivity extends AppCompatActivity
 
         submitButton.setVisibility(View.INVISIBLE);
         previousButton.setVisibility(View.INVISIBLE);
-
 
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -170,21 +169,22 @@ public class AccountActivity extends AppCompatActivity
             }
             if (radioButton.isChecked() || radioButton2.isChecked() || radioButton3.isChecked() || radioButton4.isChecked()) {
 
-
                 mmAnswer.setValue(answer);
 
-
-
-                mmmRef = new Firebase("https://e-cracking-f44e2.firebaseio.com/Test/"+String.valueOf(i));
+                mmmRef = new Firebase("https://e-cracking-f44e2.firebaseio.com/Test/"+ testId + "/" + String.valueOf(i));
                 mmmRef.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot)
                     {
+                        if (!dataSnapshot.exists()){
+                            Log.d("Datasnapshot", answer);
+                        }
                         if(dataSnapshot.exists()){
                             String Retrieve = dataSnapshot.getValue().toString();
                             ourAnswer = Retrieve;
+
                         }
-                        if(ourAnswer != null && answer != null && answer.equals(ourAnswer))
+                        if(ourAnswer != null && answer != null && ourAnswer.equals(answer))
                         {
                             mCheck.setValue(1);
                         }
@@ -200,8 +200,6 @@ public class AccountActivity extends AppCompatActivity
                 });
 
             }
-
-
 
             if (i <=20) {
 
@@ -293,7 +291,7 @@ public class AccountActivity extends AppCompatActivity
                 mmAnswer.setValue(answer);
                 mCheck = mAnswer.child("Check");
 
-                mmmRef = new Firebase("https://e-cracking-f44e2.firebaseio.com/Test/"+String.valueOf(i));
+                mmmRef = new Firebase("https://e-cracking-f44e2.firebaseio.com/Test/"+ testId +String.valueOf(i));
                 mmmRef.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot)
@@ -418,7 +416,9 @@ public class AccountActivity extends AppCompatActivity
                         p++;
 
                     }
+
                     if(p==21) {
+
                         wrongAnswer.append(notAttempted);
                         questionId.setText(wrongAnswer);
                         mDetails.setValue(wrongAnswer);

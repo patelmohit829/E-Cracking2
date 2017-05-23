@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.mohit.e_cracking.Fragments.FragmentAboutUs;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
@@ -28,15 +29,17 @@ import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 
 
+
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mAuth;
-    TextView nameView, mailView;
-    ImageView photoView;
+    TextView nameView, mailView, logo_tag_line;
+    ImageView photoView, ingenium_logo;
     String name, email, uid;
     Uri photoUrl;
+    int i;
 
 
     @Override
@@ -66,6 +69,7 @@ public class NavigationActivity extends AppCompatActivity
 
         View headerView = navigationView.getHeaderView(0);
 
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             // Name, email address, and profile photo Url
@@ -78,6 +82,9 @@ public class NavigationActivity extends AppCompatActivity
         nameView = (TextView) headerView.findViewById(R.id.nameView);
         mailView = (TextView) headerView.findViewById(R.id.mailView);
         photoView = (ImageView) headerView.findViewById(R.id.photoView);
+//        logo_tag_line = (TextView) findViewById(R.id.logo_tag_line);
+//        ingenium_logo = (ImageView) findViewById(R.id.ingenium_logo);
+
         mailView.setText(email);
         nameView.setText(name);
         Picasso.with(this).load(photoUrl).into(photoView);
@@ -122,40 +129,55 @@ public class NavigationActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+//        ingenium_logo.setVisibility(View.GONE);
+//        logo_tag_line.setVisibility(View.GONE);
+
 
         if (id == R.id.nav_homework) {
 
+
+            Bundle bundle = new Bundle();
+            bundle.putString("name", "0");
             TestFragment testFragment = new TestFragment();
+            testFragment.setArguments(bundle);
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.layout_test, testFragment, testFragment.getTag()).commit();
 
 
         } else if (id == R.id.nav_results) {
+            Bundle bundle = new Bundle();
+            bundle.putString("name", "1");
+            TestFragment testFragment = new TestFragment();
+            testFragment.setArguments(bundle);
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.layout_test, testFragment, testFragment.getTag()).commit();
 
-        } else if (id == R.id.nav_tests) {
 
-        } else if (id == R.id.nav_logOut) {
+
+        }  else if (id == R.id.nav_logOut) {
 
             FirebaseAuth.getInstance().signOut();
-            /*mAuth.signOut();
-            Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
-                    new ResultCallback<Status>() {
-                        @Override
-                        public void onResult(@NonNull Status status) {
-
-                            //updateUI(null);
-                        }
-                    });*/
-
-            Intent intent = new Intent(NavigationActivity.this, MainActivity.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
 
 
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_about_us) {
 
-        } else if (id == R.id.nav_send) {
+            Bundle bundle = new Bundle();
+            bundle.putString("name", "2");
+            TestFragment testFragment = new TestFragment();
+            testFragment.setArguments(bundle);
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.layout_test, testFragment, testFragment.getTag()).commit();
+
+
+//            getSupportFragmentManager()
+//                    .beginTransaction()
+//                    .replace(R.id.layout_test, new FragmentAboutUs())
+//                    .commit();
+
 
         }
 
