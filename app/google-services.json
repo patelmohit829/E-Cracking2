@@ -15,11 +15,71 @@
       },
       "oauth_client": [
         {
-          "client_id": "785216924046-jc4ekdqp44so2ksuuibirvur2p10ppn5.apps.googleusercontent.com",
+          "client_id": "785216924046-v9e8es3lj2d9m36m91vt52ttfhav7soe.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.mohit.e_cracking",
-            "certificate_hash": "A85AC9ED6B8954A74E0579AC92BB5ACA29E2F139"
+            "certificate_hash": "77fb754b1dfabd71a7b60c7d364ad0ad08e059df"
+          }
+        },
+        {
+          "client_id": "785216924046-9tlosd5ef7jq704ueihuj59eb5mhrp1s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mohit.e_cracking",
+            "certificate_hash": "56803041f4d895800c577c7037767531e8f20f8e"
+          }
+        },
+        {
+          "client_id": "785216924046-fn8uu1id4tkcfsmuab791gkcqtdqn63s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeuVZJFXdk6RUEARDnwN9NxnjAycffUrQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785216924046-fn8uu1id4tkcfsmuab791gkcqtdqn63s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785216924046:android:3d355a88cfd6ea82",
+        "android_client_info": {
+          "package_name": "com.ingenium.ingenium.ingeniumeomr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785216924046-e5a76p967gktglkod58tf1ft1jtqheps.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ingenium.ingenium.ingeniumeomr",
+            "certificate_hash": "77fb754b1dfabd71a7b60c7d364ad0ad08e059df"
+          }
+        },
+        {
+          "client_id": "785216924046-52nbnrpk1pd5sfulqmucavas257gtgbb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ingenium.ingenium.ingeniumeomr",
+            "certificate_hash": "56803041f4d895800c577c7037767531e8f20f8e"
           }
         },
         {

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">e-OMR</string>
+    <string name="app_name">eOMR</string>
     <string name="title_activity_navigation">NavigationActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -9,4 +9,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Created by Mohit-->
+    <string name="activity_bottom_navigation_homework_icon_title">Homework</string>
+    <string name="activity_bottom_navigation_result_icon_title">Results</string>
+    <string name="activity_bottom_navigation_notification_icon_title">Notifications</string>
+
+    <string name="client_id">785216924046-52nbnrpk1pd5sfulqmucavas257gtgbb.apps.googleusercontent.com</string>
 </resources>

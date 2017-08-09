@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5sp"
+    android:weightSum="1">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_weight=".578">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_icon"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <ProgressBar
+                android:id="@+id/linlaHeaderProgress2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+            </ProgressBar>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight=".33"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_weight=".15">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:textAlignment="center"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/grey"
+                    android:textSize="30sp"
+                    android:text="Name" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_weight=".2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_gravity="clip_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_weight=".2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:text="Class: " />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_weight=".2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_weight=".2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:text="School: " />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_weight=".2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_gravity="clip_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_weight=".2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:text="Contact: " />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey" />
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:weightSum="1"
+            android:layout_weight=".2">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_weight=".0528">
+
+                <Button
+                    android:id="@+id/button_edit_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="#009ECE"
+                    android:layout_gravity="center"
+                    android:text="Edit Profile"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button_logout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_background"
+                    android:text="Logout"
+                    android:backgroundTint="#95989A"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>

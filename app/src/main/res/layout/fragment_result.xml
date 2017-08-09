@@ -12,15 +12,15 @@
 
 
 
-    <ProgressBar
-        android:id="@+id/linlaHeaderProgress"
-        android:layout_weight=".3"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="invisible"
-        android:layout_height="wrap_content" >
-    </ProgressBar>
+        <ProgressBar
+            android:id="@+id/linlaHeaderProgress2"
+            android:layout_weight=".3"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:layout_height="wrap_content" >
+        </ProgressBar>
 
 
 
@@ -44,7 +44,7 @@
             android:maxLength="10"
             android:longClickable="false"
             android:layout_gravity="center"
-            android:hint="Your homework"
+            android:hint="Your result"
             android:textStyle="normal"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
@@ -67,8 +67,6 @@
             android:layout_height="60dp"
             android:layout_marginTop="40dp"
             android:layout_gravity="center"
-            android:textColor="@color/grey"
-            android:textSize="30dp"
             android:background="@drawable/button_next"
             android:id="@+id/submitIDresult"
             android:onClick="generate"

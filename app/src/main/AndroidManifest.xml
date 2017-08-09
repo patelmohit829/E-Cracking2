@@ -1,32 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mohit.e_cracking">
+    package="com.ingenium.ingenium.ingeniumeomr">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <supports-screens android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /><!--permission for screen overlay issue in marshmallow and above devices-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ingenium_final_icon"
+        android:icon="@drawable/rsz_icon_ingenium"
         android:label="@string/app_name"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.ingenium.ingenium.ingeniumeomr.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".AccountActivity"
+            android:name="com.ingenium.ingenium.ingeniumeomr.Activity.ActivityBottomNavigation"
             android:screenOrientation="portrait"
+            android:uiOptions="splitActionBarWhenNarrow"
             android:label="Homework Submission"></activity>
         <activity
-            android:name=".NavigationActivity"
+            android:name="com.ingenium.ingenium.ingeniumeomr.Activity.ActivityUpdateProfile"
             android:screenOrientation="portrait"
-            android:label="e-OMR"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:label="Update Profile"></activity>
+
+        <activity
+            android:name="com.ingenium.ingenium.ingeniumeomr.Activity.ActivityHello"
+            android:screenOrientation="portrait"
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:label="Update Profile"></activity>
+
+        <service
+            android:name="com.ingenium.ingenium.ingeniumeomr.Services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.ingenium.ingenium.ingeniumeomr.Services.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/rsz_icon_ingenium" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/accent" />
+
     </application>
 
 </manifest>

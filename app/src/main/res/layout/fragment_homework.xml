@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.ingenium.ingenium.ingeniumeomr.Activity.ActivityBottomNavigation">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_weight=".35">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5">
+
+            <TextView
+                android:text="Question:"
+                android:id="@+id/question"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:textSize="30sp"
+                android:textColor="@color/grey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5">
+
+            <Button
+                android:text="3"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_background"
+                android:id="@+id/questionId"
+                android:textSize="35sp"
+                android:paddingLeft="0dp"
+                android:paddingTop="1.5dp"
+                android:textColor="@color/grey" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:weightSum="1"
+          android:layout_weight=".25">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ll_options"
+            android:orientation="vertical"
+            android:layout_weight=".33"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".25">
+
+                <TextView
+                    android:id="@+id/optiongroup1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:inputType="textMultiLine"
+                    android:text="A."
+                    android:textSize="25sp"
+                    android:textColor="@color/grey"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".25">
+
+                <TextView
+                    android:id="@+id/optiongroup2"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:text="B."
+                    android:textSize="25sp"
+                    android:textColor="@color/grey"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".25">
+
+                <TextView
+                    android:id="@+id/optiongroup3"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:text="C."
+                    android:textSize="25sp"
+                    android:textColor="@color/grey"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".25">
+
+                <TextView
+                    android:id="@+id/optiongroup4"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:text="D."
+                    android:textSize="25sp"
+                    android:textColor="@color/grey"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_weight="0.33"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".3">
+
+                <EditText
+                    android:id="@+id/string_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:hint="Your Answer"
+                    android:textColor="@color/grey"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    android:maxLength="21"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:text="Once submitted you can not edit afterwards"
+                android:layout_width="match_parent"
+                android:layout_weight=".2"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:id="@+id/notice"
+                android:textSize="25sp"
+                android:textColor="@color/grey"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ll_options2"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_weight=".34">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton3"
+                    android:layout_weight=".25"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:id="@+id/radioButton4" />
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_weight=".4">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".33">
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="5dp"
+                android:layout_weight=".3"
+                android:textColor="@color/grey"
+                android:textSize="30dp"
+                android:textStyle="normal"
+                android:background="@drawable/button_back"
+                android:id="@+id/previousButton"
+                android:onClick="previous" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".33">
+        <Button
+            android:id="@+id/submitButton"
+            android:text="Submit"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:onClick="submit"
+            android:backgroundTint="#009ECE"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".33">
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_weight=".3"
+                android:layout_width="60dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="60dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/grey"
+                android:textSize="30dp"
+                android:textStyle="normal"
+                android:background="@drawable/button_next"/>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

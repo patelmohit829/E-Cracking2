@@ -22,24 +22,6 @@
             android:layout_height="match_parent"
             android:layout_weight=".45">
 
-            <LinearLayout
-                android:id="@+id/linlaHeaderProgress3"
-                android:layout_width="fill_parent"
-                android:layout_below="@+id/sign_in_button"
-                android:layout_marginTop="30dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:visibility="gone" >
-
-                <ProgressBar
-                    android:id="@+id/pbHeaderProgress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
-                </ProgressBar>
-
-            </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
@@ -53,7 +35,7 @@
                 android:id="@+id/ingenium_logo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.33"
+                android:layout_weight=".33"
                 app:srcCompat="@drawable/ingenium_final_logo"
                 android:layout_centerHorizontal="true" />
 
@@ -65,15 +47,11 @@
                 android:orientation="vertical"
                 />
 
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/sign_in_button"
-                android:layout_width="150dp"
-                android:layout_gravity="center"
+            <ImageView
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:onClick="onClick"
-                android:layout_below="@+id/ingenium_tag_line"
-                android:layout_centerHorizontal="true" />
+                android:layout_weight=".5"
+                android:src="@drawable/hello_sset"/>
 
         </LinearLayout>
 
@@ -81,10 +59,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".25">
-
-
-
-
         </LinearLayout>
 
 
@@ -93,4 +67,3 @@
 
 
 </LinearLayout>
-
